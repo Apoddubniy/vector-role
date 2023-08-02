@@ -1,16 +1,8 @@
 ---
-# tasks file for vector-role
- - name: Get RPM Vector
-   ansible.builtin.get_url:
-     url: "https://packages.timber.io/vector/{{ vector_ver }}/vector-{{ vector_ver }}-1.x86_64.rpm"
-     dest: "./vector-{{ vector_ver }}-1.x86_64.rpm"
- - name: Install RPM vector
-   become: true
-   ansible.builtin.yum:
-     name:
-      - vector-{{ vector_ver }}-1.x86_64.rpm
- - name: Input config Vector
-   template:
-     src: vector.j2
-     dest: /etc/vector/vector.toml
-     mode: "0644"
+- name: install *.rpm
+  include_tasks: rpm.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: install *.deb
+  include_tasks: deb.yml
+  when: ansible_os_family == 'Debian'

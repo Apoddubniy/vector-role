@@ -1,5 +1,8 @@
+---
 galaxy_info:
-  author: Aleksandr Poddubniy
+  role_name: vector
+  namespace: vector
+  author: Amveric
   description: install Vector
 
   # If the issue tracker for your role is not on github, uncomment the

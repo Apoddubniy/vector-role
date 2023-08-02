@@ -1,0 +1,14 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  vars:
+    vector_config_file: '/etc/vector/vector.toml'
+  tasks:
+  - name: Example assertion
+    assert:
+      that: true
+  - name: Check config file
+    shell: cat {{ vector_config_file }}
