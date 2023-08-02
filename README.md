@@ -23,7 +23,7 @@ Support platforms:
 Description role
 --------
 #### Tasks Vector
-
+* Изменен файл tasks/main.yml, разделены таски под разные дистрибутивы, за счет ссылок.
 * Хендлер, с ролью перезапуска `state: restarted` сервиса `name: vector` с правами суперпользователя `become: true`
 * Скачивание дистрибутива с помощью модуля `ansible.builtin.get_url` по ссылкам.
 * Переменная `{{ vector_ver }}` принимает значения указанные в `default/main.yml` / `vector_ver`
@@ -47,4 +47,4 @@ MIT
 Author Information
 ------------------
 
-Aleksandr Poddubniy
+Amveric
