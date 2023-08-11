@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: vector-role
+  role_name: vector
   namespace: vector
   author: Amveric
   description: install Vector
