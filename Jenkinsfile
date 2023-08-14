@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'pipeline'
+        label 'lin'
     }
     stages {
 //         stage('Git') {
